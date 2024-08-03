@@ -1,4 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
+
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import { AllCharacters, CharacterDetail, Favorites } from './pages';
