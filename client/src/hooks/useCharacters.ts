@@ -7,11 +7,12 @@ interface CharacterList {
   count: number;
 }
 
-export const useCharacters = () => {
+export const useCharacters = (nameStartsWith?: string) => {
   const { data, error, isValidating, isLoading } = useSWR<{
     data: CharacterList;
-  }>(characters, fetcher, {
+  }>(characters(nameStartsWith), fetcher, {
     revalidateOnFocus: false,
+    revalidateOnReconnect: false,
     dedupingInterval: 60000,
   });
   return {

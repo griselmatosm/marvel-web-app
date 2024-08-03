@@ -6,4 +6,10 @@ export const fetcher = (url: string) => {
   return axios.get(url).then((response) => response.data);
 };
 
-export const characters = API_BASE_URL + "/characters";
+export const characters = (nameStartsWith?: string) => {
+  const params = new URLSearchParams({
+    ...(nameStartsWith && { nameStartsWith }),
+  });
+
+  return `${API_BASE_URL}/characters?${params.toString()}`;
+};
