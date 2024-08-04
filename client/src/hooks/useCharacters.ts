@@ -15,9 +15,12 @@ export const useCharacters = (nameStartsWith?: string) => {
     revalidateOnReconnect: false,
     dedupingInterval: 60000,
   });
+
+  console.log({ data, error, isValidating, isLoading });
+
   return {
     data: { results: data?.data?.results || [], count: data?.data?.count || 0 },
-    isLoading: !data && !error && !isValidating && isLoading,
+    isLoading: isLoading,
     isError: error,
   };
 };

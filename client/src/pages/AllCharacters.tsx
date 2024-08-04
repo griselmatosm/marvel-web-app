@@ -10,12 +10,11 @@ export const AllCharacters = () => {
 
   console.log({ characters, isError, isLoading })
   return (
-    <main style={{ padding: "48px 48px 0" }}>
+    <>
       <Searcher placeholder='Search a character...' count={count} onSearch={setSearchTerm} />
       {isLoading && <p className="loading">Loading...</p>}
-      {isError && <p className="error">Error loading characters</p>}
-      {!isLoading && !isError && characters.length === 0 && <p className="loading">No results found</p>}
+      {isError && !isLoading && <p className="error">Error loading characters</p>}
       {!isLoading && characters.length > 0 && <CharactersList characters={characters} />}
-    </main>
+    </>
   )
 }

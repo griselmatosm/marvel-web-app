@@ -24,7 +24,6 @@ export const CharacterCard = ({ character }: CharacterCardProps) => {
     };
     toggleFavorite(newFavorite);
   }
-  console.log("favorites", favorites, "isFavorite", isFavorite);
 
   return (
     <article className={cx(styles.characterCard, { [styles.isFavorite]: isFavorite })}>

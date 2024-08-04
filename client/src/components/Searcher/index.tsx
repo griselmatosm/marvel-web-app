@@ -9,7 +9,7 @@ interface SearcherProps {
   onSearch: (searchTerm: string) => void;
 }
 
-const Counter = ({ count }: { count: number }) => <p>{count} results</p>;
+const Counter = ({ count }: { count: number }) => <p className={styles.counter}>{count} results</p>;
 
 export const Searcher = ({ placeholder, count, onSearch }: SearcherProps) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -25,7 +25,7 @@ export const Searcher = ({ placeholder, count, onSearch }: SearcherProps) => {
   };
 
   return (
-    <search>
+    <search className={styles.searcher}>
       <form className={styles.searcherContainer} onSubmit={(e) => e.preventDefault()}>
         <img className={styles.searcherIcon} src="/search_icon.svg" alt="search icon" />
         <input

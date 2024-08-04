@@ -1,0 +1,8 @@
+.iconWithCounter {
+  display: flex;
+  gap: 8px;
+}
+
+.counter {
+  color: white;
+}
