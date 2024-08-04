@@ -17,7 +17,7 @@ export const useCharacters = (nameStartsWith?: string) => {
   });
   return {
     data: { results: data?.data?.results || [], count: data?.data?.count || 0 },
-    isLoading: isLoading || isValidating,
+    isLoading: !data && !error && !isValidating && isLoading,
     isError: error,
   };
 };

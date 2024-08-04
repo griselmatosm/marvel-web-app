@@ -6,5 +6,4 @@ export interface Character {
     path: string;
     extension: string;
   };
-  resourceURI: string;
 }

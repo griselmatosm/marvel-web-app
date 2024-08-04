@@ -3,6 +3,10 @@
   flex-direction: column;
 }
 
+.characterCard:hover {
+  cursor: pointer;
+}
+
 .characterInfo {
   display: flex;
   justify-content: space-between;
@@ -14,8 +18,12 @@
   height: 56px;
 }
 
-.characterInfo img {
-  width: 12px;
+.characterCard:hover .characterInfo {
+  background-color: red;
+}
+
+.characterCard:hover.isFavorite .heartIcon path {
+  fill: white;
 }
 
 .characterImage {
@@ -26,4 +34,13 @@
   margin: 0;
   font-size: 14px;
   font-weight: 400;
+}
+
+.characterCard button {
+  display: flex;
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
 }
