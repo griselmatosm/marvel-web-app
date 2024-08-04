@@ -1,6 +1,6 @@
 const express = require("express");
 const axios = require("axios");
-const axiosRetry = require("axios-retry");
+const axiosRetry = require("axios-retry").default;
 const crypto = require("crypto");
 const cors = require("cors");
 const NodeCache = require("node-cache");
