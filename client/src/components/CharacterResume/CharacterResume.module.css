@@ -1,0 +1,60 @@
+.characterResumeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 320px;
+  padding: 0 276px;
+  background-color: black;
+  color: white;
+}
+
+.characterResumeContent {
+  display: flex;
+  gap: 48px;
+  height: 100%;
+}
+
+.characterImage {
+  height: 100%;
+}
+
+.characterResumeInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+
+.characterResumeInfoHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.characterResumeContainer button {
+  display: flex;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .characterResumeContainer {
+    height: auto;
+    padding: 0;
+  }
+  .characterResumeContent {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .characterResumeInfo {
+    padding: 24px 16px 48px;
+  }
+  .characterImage {
+    width: 100%;
+  }
+}

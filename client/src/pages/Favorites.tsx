@@ -19,10 +19,10 @@ export const Favorites = () => {
 
 
   return (
-    <>
+    <main style={{ padding: "48px 48px 0" }}>
       <h1 style={{ textTransform: 'uppercase' }}>Favorites</h1>
       <Searcher placeholder='Search a character...' count={favorites.length} onSearch={setSearchTerm} />
       {favorites.length > 0 && <CharactersList characters={filteredFavorites} />}
-    </>
+    </main>
   )
 }

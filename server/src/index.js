@@ -98,6 +98,42 @@ app.get("/api/characters", async (req, res) => {
   }
 });
 
+app.get("/api/character/:characterId", async (req, res) => {
+  try {
+    const { characterId } = req.params;
+    console.log(
+      "Received request for /api/character/:characterId",
+      "characterId:",
+      characterId
+    );
+
+    const response = await axios.get(
+      `https://gateway.marvel.com/v1/public/characters/${characterId}`,
+      {
+        params: {
+          apikey: process.env.MARVEL_PUBLIC_KEY,
+          ts: new Date().getTime().toString(),
+          hash: crypto
+            .createHash("md5")
+            .update(
+              new Date().getTime().toString() +
+                process.env.MARVEL_PRIVATE_KEY +
+                process.env.MARVEL_PUBLIC_KEY
+            )
+            .digest("hex"),
+        },
+      }
+    );
+
+    console.log("Marvel API Response:", response.data);
+
+    res.json(response.data);
+  } catch (error) {
+    console.error("Error in /api/character/:characterId:", error.message);
+    res.status(500).json({ error: error.message });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });

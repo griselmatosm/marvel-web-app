@@ -13,3 +13,7 @@ export const characters = (nameStartsWith?: string) => {
 
   return `${API_BASE_URL}/characters?${params.toString()}`;
 };
+
+export const characterDetail = (characterId: string) => {
+  return `${API_BASE_URL}/character/${characterId}`;
+};

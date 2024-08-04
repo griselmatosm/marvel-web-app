@@ -11,9 +11,7 @@ export const Layout = ({ children }: LayoutProps) => {
       <Header>
         <FavoritesCounter />
       </Header>
-      <main style={{ padding: "48px 48px 0" }}>
-        {children}
-      </main>
+      {children}
     </>
   )
 }

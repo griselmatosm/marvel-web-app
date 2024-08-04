@@ -1,16 +1,10 @@
 /* eslint-disable react/react-in-jsx-scope */
-import cx from 'classnames';
-import { Link } from 'react-router-dom';
 import { CharacterWithIsFavorite, useFavorites } from '../../contexts/FavoritesContext';
 import { Character } from "../../interfaces/Character";
 import { HeartIconEmpty, HeartIconFilled } from '../Icon';
-import styles from './CharacterCard.module.css';
+import styles from './CharacterResume.module.css';
 
-interface CharacterCardProps {
-  character: Character;
-}
-
-export const CharacterCard = ({ character }: CharacterCardProps) => {
+export const CharacterResume = ({ character }: { character: Character }) => {
 
   const { toggleFavorite, favorites } = useFavorites();
   const isFavorite = favorites.some((favorite) => favorite.id === character.id);
@@ -25,19 +19,20 @@ export const CharacterCard = ({ character }: CharacterCardProps) => {
     };
     toggleFavorite(newFavorite);
   }
-
   return (
-    <Link to={`/character/${character.id}`}>
-      <article className={cx(styles.characterCard, { [styles.isFavorite]: isFavorite })}>
+    <section className={styles.characterResumeContainer}>
+      <div className={styles.characterResumeContent}>
         <img className={styles.characterImage} src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt={character.name} />
-        <div className={styles.characterInfo}>
-          <h2>{character.name}</h2>
-          <button onClick={handleClick}>
-            {isFavorite ? <HeartIconFilled className={styles.heartIcon} color='#EC1D24' size={12} /> : <HeartIconEmpty className={styles.heartIcon} color='white' size={12} />}
-          </button>
+        <div className={styles.characterResumeInfo}>
+          <div className={styles.characterResumeInfoHeader}>
+            <h2>{character.name}</h2>
+            <button onClick={handleClick}>
+              {isFavorite ? <HeartIconFilled className={styles.heartIcon} color='#EC1D24' size={24} /> : <HeartIconEmpty className={styles.heartIcon} color='white' size={24} />}
+            </button>
+          </div>
+          <p>{character.description}</p>
         </div>
-      </article>
-    </Link>
-
+      </div>
+    </section>
   )
 }
