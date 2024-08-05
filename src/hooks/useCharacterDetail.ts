@@ -1,9 +1,9 @@
 import useSWR from "swr";
-import { characterDetail, fetcher } from "../services/marvelService";
+import { fetcher, getCharacterDetailUrl } from "../services/marvelService";
 
 export const useCharacterDetail = (characterId: string) => {
   const { data, error, isValidating, isLoading } = useSWR(
-    characterDetail(characterId),
+    getCharacterDetailUrl(characterId),
     fetcher,
     {
       revalidateOnFocus: false,

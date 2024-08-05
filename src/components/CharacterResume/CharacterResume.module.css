@@ -51,10 +51,20 @@
     gap: 0;
   }
 
-  .characterResumeInfo {
-    padding: 24px 16px 48px;
-  }
   .characterImage {
     width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .characterResumeContainer {
+    padding: 0;
+  }
+  .characterResumeContent {
+    gap: 0;
+  }
+
+  .characterResumeInfo {
+    padding: 24px 16px 48px;
   }
 }

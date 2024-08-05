@@ -1,6 +1,6 @@
 import useSWR from "swr";
 import { Character } from "../interfaces/Character";
-import { characters, fetcher } from "../services/marvelService";
+import { fetcher, getCharactersUrl } from "../services/marvelService";
 
 interface CharacterList {
   results: Character[];
@@ -10,7 +10,7 @@ interface CharacterList {
 export const useCharacters = (nameStartsWith?: string) => {
   const { data, error, isValidating, isLoading } = useSWR<{
     data: CharacterList;
-  }>(characters(nameStartsWith), fetcher, {
+  }>(getCharactersUrl(nameStartsWith), fetcher, {
     revalidateOnFocus: false,
     revalidateOnReconnect: false,
     dedupingInterval: 60000,
