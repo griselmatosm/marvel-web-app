@@ -27,7 +27,7 @@ export const CharacterResume = ({ character }: { character: Character }) => {
           <div className={styles.characterResumeInfoHeader}>
             <h2>{character.name}</h2>
             <button onClick={handleClick}>
-              {isFavorite ? <HeartIconFilled className={styles.heartIcon} color='#EC1D24' size={24} /> : <HeartIconEmpty className={styles.heartIcon} color='white' size={24} />}
+              {isFavorite ? <HeartIconFilled className={styles.heartIcon} color='var(--color-primary)' size={24} /> : <HeartIconEmpty className={styles.heartIcon} color='var(--color-white)' size={24} />}
             </button>
           </div>
           <p>{character.description}</p>

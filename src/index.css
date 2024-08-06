@@ -6,6 +6,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* variables */
+  --color-primary: #ec1d24;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-gray: #aaaaaa;
 }
 
 a {

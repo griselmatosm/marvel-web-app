@@ -15,7 +15,8 @@ export const CharacterCard = ({ character }: CharacterCardProps) => {
   const { toggleFavorite, favorites } = useFavorites();
   const isFavorite = favorites.some((favorite) => favorite.id === character.id);
 
-  const handleClick = () => {
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
     const newFavorite: CharacterWithIsFavorite = {
       id: character.id,
       isFavorite: isFavorite,
@@ -33,11 +34,10 @@ export const CharacterCard = ({ character }: CharacterCardProps) => {
         <div className={styles.characterInfo}>
           <h2>{character.name}</h2>
           <button onClick={handleClick}>
-            {isFavorite ? <HeartIconFilled className={styles.heartIcon} color='#EC1D24' size={12} /> : <HeartIconEmpty className={styles.heartIcon} color='white' size={12} />}
+            {isFavorite ? <HeartIconFilled className={styles.heartIcon} color='var(--color-primary)' size={12} /> : <HeartIconEmpty className={styles.heartIcon} color='var(--color-white)' size={12} />}
           </button>
         </div>
       </article>
     </Link>
-
   )
 }

@@ -9,7 +9,7 @@ export const FavoritesCounter = () => {
   return (
     <Link to="/favorites">
       <IconWithCounter count={favorites.length} >
-        <HeartIconFilled color='#EC1D24' size={24} />
+        <HeartIconFilled color='var(--color-primary)' size={24} />
       </IconWithCounter>
     </Link>
   )

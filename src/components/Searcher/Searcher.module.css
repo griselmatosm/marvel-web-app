@@ -5,8 +5,8 @@
 .searcherContainer {
   display: flex;
   align-items: center;
-  color: #000000;
-  border-bottom: 1px solid #000000;
+  color: var(--color-black);
+  border-bottom: 1px solid var(--color-black);
   padding: 0px 0px 8px 0px;
   gap: 10px;
 }
@@ -20,7 +20,7 @@
 }
 
 .searcherInput::placeholder {
-  color: #aaaaaa;
+  color: var(--color-gray);
 }
 
 .counter {

@@ -3,10 +3,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 16px;
-  background-color: #000000;
+  background-color: var(--color-black);
   height: 84px;
-  color: #ffffff;
-  position: relative;
+  color: var(--color-white);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .headerContainer::after {
@@ -15,7 +17,7 @@
   bottom: 0;
   left: 0;
   height: 4px;
-  background-color: #ec1d24;
+  background-color: var(--color-primary);
   width: 0;
 }
 
