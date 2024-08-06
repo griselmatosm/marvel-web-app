@@ -15,7 +15,7 @@ export const Searcher = ({ placeholder, count, onSearch }: SearcherProps) => {
   const [searchTerm, setSearchTerm] = useState('');
   const debouncedSearchTerm = useDebounce(searchTerm, 500); // 500ms debounce
 
-  // Actualizar la búsqueda cuando se cambia el valor debounced
+  // Actualiza la búsqueda cuando se cambia el valor debounced
   useEffect(() => {
     onSearch(debouncedSearchTerm);
   }, [debouncedSearchTerm, onSearch]);

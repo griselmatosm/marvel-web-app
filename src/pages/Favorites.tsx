@@ -3,10 +3,14 @@ import { useEffect, useState } from 'react';
 import { CharactersList } from '../components/CharactersList';
 import { Searcher } from '../components/Searcher';
 import { useFavorites } from '../contexts/FavoritesContext';
+import { useLoading } from '../contexts/LoadingContext';
+
 export const Favorites = () => {
   const { favorites } = useFavorites();
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredFavorites, setFilteredFavorites] = useState(favorites);
+  const { setIsLoading } = useLoading();
+
 
   useEffect(() => {
     setFilteredFavorites(
@@ -15,6 +19,11 @@ export const Favorites = () => {
       )
     );
   }, [searchTerm, favorites]);
+
+
+  useEffect(() => {
+    setIsLoading(false)
+  }, [setIsLoading])
 
 
 

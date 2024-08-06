@@ -1,5 +1,5 @@
 .searcher {
-  margin-bottom: 24px;
+  margin: 24px 0;
 }
 
 .searcherContainer {
@@ -19,6 +19,12 @@
   text-transform: uppercase;
 }
 
+.searcherInput::placeholder {
+  color: #aaaaaa;
+}
+
 .counter {
+  font-size: 12px;
+  margin-top: 12px;
   text-transform: uppercase;
 }
