@@ -11,7 +11,6 @@ export const Favorites = () => {
   const [filteredFavorites, setFilteredFavorites] = useState(favorites);
   const { setIsLoading } = useLoading();
 
-
   useEffect(() => {
     setFilteredFavorites(
       favorites.filter((favorite) =>
@@ -20,12 +19,9 @@ export const Favorites = () => {
     );
   }, [searchTerm, favorites]);
 
-
   useEffect(() => {
     setIsLoading(false)
   }, [setIsLoading])
-
-
 
   return (
     <main style={{ padding: "48px 48px 0" }}>

@@ -1,5 +1,5 @@
 .searcher {
-  margin: 24px 0;
+  margin: var(--gap-medium) 0;
 }
 
 .searcherContainer {
@@ -15,7 +15,7 @@
   width: 100%;
   border: none;
   outline: none;
-  font-size: 16px;
+  font-size: var(--font-size-large);
   text-transform: uppercase;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .counter {
-  font-size: 12px;
+  font-size: var(--font-size-small);
   margin-top: 12px;
   text-transform: uppercase;
 }

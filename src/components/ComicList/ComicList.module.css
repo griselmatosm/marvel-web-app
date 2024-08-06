@@ -5,13 +5,13 @@
   max-width: 960px;
   overflow-x: auto;
   margin: 0 auto;
-  margin-top: 24px;
+  margin-top: var(--gap-medium);
 }
 
 .comicListContainer {
   display: flex;
   flex-wrap: nowrap;
-  gap: 16px;
+  gap: var(--gap-small);
 }
 
 .comicListContainer li {

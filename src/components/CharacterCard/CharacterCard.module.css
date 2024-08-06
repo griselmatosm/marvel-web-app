@@ -1,6 +1,16 @@
 .characterCard {
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.characterCard::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-bottom: 13px solid var(--color-white);
+  border-left: 13px solid transparent;
 }
 
 .characterCard:hover {
@@ -11,7 +21,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
+  padding: var(--gap-small);
   background-color: var(--color-black);
   color: var(--color-white);
   border-top: var(--color-primary) 6px solid;
@@ -32,7 +42,7 @@
 
 .characterCard h2 {
   margin: 0;
-  font-size: 14px;
+  font-size: var(--font-size-medium);
   font-weight: 400;
 }
 

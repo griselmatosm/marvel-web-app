@@ -17,12 +17,13 @@ export const ComicList = () => {
   }, [isLoadingComics, setIsLoading])
 
   if (isLoadingComics || isValidatingComics) return null
-  if (isErrorComics) return <div>Error loading character</div>
 
   return (<>
     <h2 className={styles.comicListTitle}>Comics</h2>
     <div className={styles.comicListWrapper}>
       <ul className={styles.comicListContainer}>
+        {isErrorComics && <p>Error loading comics</p>}
+        {comics?.length === 0 && <p>No comics found</p>}
         {comics?.map((comic: Comic) => (
           <li key={comic.id}>
             <ComicCard comic={comic} />

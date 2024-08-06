@@ -8,10 +8,22 @@
   -moz-osx-font-smoothing: grayscale;
 
   /* variables */
+
+  /* colors */
   --color-primary: #ec1d24;
   --color-black: #000000;
   --color-white: #ffffff;
   --color-gray: #aaaaaa;
+
+  /* gaps */
+  --gap-small: 16px;
+  --gap-medium: 24px;
+  --gap-large: 48px;
+
+  /* font sizes */
+  --font-size-small: 12px;
+  --font-size-medium: 14px;
+  --font-size-large: 16px;
 }
 
 a {

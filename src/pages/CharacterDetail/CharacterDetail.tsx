@@ -1,10 +1,10 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { CharacterResume } from '../components/CharacterResume';
-import { ComicList } from '../components/ComicList';
-import { useLoading } from '../contexts/LoadingContext';
-import { useCharacterDetail } from '../hooks/useCharacterDetail';
+import { CharacterResume } from '../../components/CharacterResume';
+import { ComicList } from '../../components/ComicList';
+import { useLoading } from '../../contexts/LoadingContext';
+import { useCharacterDetail } from '../../hooks/useCharacterDetail';
 import styles from './CharacterDetail.module.css';
 
 export const CharacterDetail = () => {
@@ -16,12 +16,12 @@ export const CharacterDetail = () => {
     setIsLoading(isLoading)
   }, [isLoading, setIsLoading])
 
-  if (isLoading || isValidating || isError) return null
-
+  if (isLoading || isValidating) return null
 
   return (
     <main>
       {character && <CharacterResume character={character} />}
+      {isError && <div>Error fetching character</div>}
       <section className={styles.comicsSection}>
         <ComicList />
       </section>
