@@ -1,0 +1,17 @@
+.comicsSection {
+  padding: 48px 276px 0;
+  max-width: 960px;
+  margin: auto;
+}
+
+@media (max-width: 1024px) {
+  .comicsSection {
+    padding: 48px 0 0 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .comicsSection {
+    padding-left: 16px;
+  }
+}

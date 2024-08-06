@@ -1,0 +1,30 @@
+.searcher {
+  margin: 24px 0;
+}
+
+.searcherContainer {
+  display: flex;
+  align-items: center;
+  color: #000000;
+  border-bottom: 1px solid #000000;
+  padding: 0px 0px 8px 0px;
+  gap: 10px;
+}
+
+.searcherInput {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.searcherInput::placeholder {
+  color: #aaaaaa;
+}
+
+.counter {
+  font-size: 12px;
+  margin-top: 12px;
+  text-transform: uppercase;
+}

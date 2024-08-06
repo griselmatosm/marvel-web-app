@@ -1,0 +1,37 @@
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  background-color: #000000;
+  height: 84px;
+  color: #ffffff;
+  position: relative;
+}
+
+.headerContainer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background-color: #ec1d24;
+  width: 0;
+}
+
+@keyframes loadingAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.headerContainer.isLoading::after {
+  animation: loadingAnimation 2s linear infinite;
+}
+
+.headerContainer a {
+  display: inline-flex;
+}

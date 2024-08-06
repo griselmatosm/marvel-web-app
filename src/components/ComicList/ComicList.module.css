@@ -1,0 +1,19 @@
+.comicListTitle {
+  text-transform: uppercase;
+}
+.comicListWrapper {
+  max-width: 960px;
+  overflow-x: auto;
+  margin: 0 auto;
+  margin-top: 24px;
+}
+
+.comicListContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+}
+
+.comicListContainer li {
+  flex: 0 0 auto;
+}

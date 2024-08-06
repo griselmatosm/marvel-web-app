@@ -1,0 +1,52 @@
+.characterCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.characterCard:hover {
+  cursor: pointer;
+}
+
+.characterInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: black;
+  color: white;
+  border-top: red 6px solid;
+  height: 56px;
+}
+
+.characterCard:hover .characterInfo {
+  background-color: red;
+}
+
+.characterCard:hover.isFavorite .heartIcon path {
+  fill: white;
+}
+
+.characterImage {
+  height: 180px;
+}
+
+.characterCard h2 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.characterCard button {
+  display: flex;
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+@media (max-width: 478px) {
+  .characterImage {
+    height: 100%;
+  }
+}
