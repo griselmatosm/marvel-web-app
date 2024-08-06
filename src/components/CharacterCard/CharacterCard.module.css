@@ -27,7 +27,7 @@
 }
 
 .characterImage {
-  height: 189.97px;
+  height: 180px;
 }
 
 .characterCard h2 {
@@ -43,4 +43,10 @@
   outline: none;
   box-shadow: none;
   cursor: pointer;
+}
+
+@media (max-width: 478px) {
+  .characterImage {
+    height: 100%;
+  }
 }

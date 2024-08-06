@@ -1,0 +1,18 @@
+.comicContainer {
+  width: 180px;
+  height: 340px;
+  overflow: hidden;
+}
+
+.comicContainer img {
+  width: 100%;
+  height: 268px;
+}
+
+.comicContainer h3 {
+  font-size: 16px;
+}
+
+.comicContainer p {
+  font-size: 12px;
+}
