@@ -49,16 +49,16 @@ Asegúrate de tener el siguiente software instalado en tu máquina:
    ```bash
    VITE_MARVEL_PUBLIC_KEY=your_public_key
    VITE_MARVEL_PRIVATE_KEY=your_private_key
-
-   Reemplaza `your_public_key` y `your_private_key` con tus claves de API de Marvel reales.
    ```
+Reemplaza `your_public_key` y `your_private_key` con tus claves de API de Marvel reales.
+   
 
 ### Ejecución del proyecto
 
 Para ejecutar la aplicación en modo desarrollo, usa el siguiente comando:
 
 ```bash
-npm start
+npm run dev
 ```
 
 Abre http://localhost:5173 para ver la aplicación en el navegador. La página se recargará automáticamente si realizas cambios en el código.
@@ -68,7 +68,7 @@ Abre http://localhost:5173 para ver la aplicación en el navegador. La página s
 Este proyecto incluye pruebas unitarias para los componentes. Para ejecutar las pruebas, usa el siguiente comando:
 
 ```bash
-npm test
+npm run test
 ```
 
 ### Futuras Mejoras
