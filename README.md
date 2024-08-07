@@ -1,30 +1,81 @@
-# React + TypeScript + Vite
+# Marvel Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación web que permite a los usuarios explorar y buscar personajes de Marvel, ver detalles de los personajes y gestionar una lista de personajes favoritos. Está construido con React, TypeScript y Vite.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Navegar por una lista de personajes de Marvel
+- Buscar personajes por nombre
+- Ver información detallada sobre un personaje
+- Agregar o eliminar personajes de la lista de favoritos
+- Persistir la lista de favoritos en diferentes vistas
 
-## Expanding the ESLint configuration
+## Tecnologías Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React
+- TypeScript
+- Vite
+- Axios
+- SWR
+- React Router
+- Jest y Testing Library para pruebas
+- CSS Modules para estilos
 
-- Configure the top-level `parserOptions` property like this:
+## Comenzando
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+### Prerrequisitos
+
+Asegúrate de tener el siguiente software instalado en tu máquina:
+
+- Node.js (v14 o posterior)
+- npm (v6 o posterior)
+
+### Instalación
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/griselmatosm/marvel-web-app.git
+   ```
+2. Navega al directorio del proyecto:
+   ```bash
+   cd marvel-web-app
+   ```
+3. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+4. Crea un archivo .env en el directorio raíz con el siguiente contenido:
+
+   ```bash
+   VITE_MARVEL_PUBLIC_KEY=your_public_key
+   VITE_MARVEL_PRIVATE_KEY=your_private_key
+
+   Reemplaza `your_public_key` y `your_private_key` con tus claves de API de Marvel reales.
+   ```
+
+### Ejecución del proyecto
+
+Para ejecutar la aplicación en modo desarrollo, usa el siguiente comando:
+
+```bash
+npm start
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Abre http://localhost:5173 para ver la aplicación en el navegador. La página se recargará automáticamente si realizas cambios en el código.
+
+### Ejecución de Pruebas
+
+Este proyecto incluye pruebas unitarias para los componentes. Para ejecutar las pruebas, usa el siguiente comando:
+
+```bash
+npm test
+```
+
+### Futuras Mejoras
+
+A continuación, se presentan algunas mejoras que se podrían implementar en el futuro para mejorar la funcionalidad y la experiencia del usuario:
+
+1. Implementar pruebas adicionales para aumentar la cobertura, especialmente pruebas de integración.
+2. Optimizar el rendimiento de la aplicación, particularmente la funcionalidad de búsqueda.
+3. Añadir un manejo de errores más detallado y retroalimentación al usuario.
+4. Integrar una capa de caché, como Redis, para manejar las respuestas de la API y reducir los tiempos de carga.
