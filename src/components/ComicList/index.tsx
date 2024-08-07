@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { useLoading } from '../../contexts/LoadingContext';
 import { useCharacterComics } from "../../hooks/useCharacterComics";
 import { Comic } from '../../interfaces/Comic';
-import { ComicCard } from "../Comic";
+import { ComicCard } from "../ComicCard";
 import styles from './ComicList.module.css';
 
 export const ComicList = () => {
