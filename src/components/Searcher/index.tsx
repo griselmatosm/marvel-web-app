@@ -25,7 +25,7 @@ export const Searcher = ({ placeholder, count, onSearch }: SearcherProps) => {
   };
 
   return (
-    <search className={styles.searcher}>
+    <div className={styles.searcher}>
       <form className={styles.searcherContainer} onSubmit={(e) => e.preventDefault()}>
         <img className={styles.searcherIcon} src="/search_icon.svg" alt="search icon" />
         <input
@@ -37,6 +37,6 @@ export const Searcher = ({ placeholder, count, onSearch }: SearcherProps) => {
         />
       </form>
       <Counter count={count} />
-    </search>
+    </div>
   );
 };
